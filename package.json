@@ -1,5 +1,5 @@
 {
-  "name": "async-shell",
+  "name": "asyncsh",
   "version": "0.1.0",
   "description": "A headless terminal multiplexer and MCP server designed specifically for AI agents.",
   "main": "index.js",
@@ -22,7 +22,7 @@
     "node": ">= 18"
   },
   "napi": {
-    "name": "async-shell"
+    "name": "asyncsh"
   },
   "scripts": {
     "build": "napi build --release"
