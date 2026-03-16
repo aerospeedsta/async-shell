@@ -3,7 +3,7 @@ requires = ["maturin>=1.5,<2.0"]
 build-backend = "maturin"
 
 [project]
-name = "async-shell"
+name = "asyncsh"
 version = "0.1.0"
 description = "A headless terminal multiplexer and MCP server designed specifically for AI agents."
 authors = [{name = "CURD Project"}]
