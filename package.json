@@ -1,0 +1,46 @@
+{
+  "name": "async-shell",
+  "version": "0.1.0",
+  "description": "A headless terminal multiplexer and MCP server designed specifically for AI agents.",
+  "main": "index.js",
+  "bin": {
+    "async-shell": "bin/async-shell.js"
+  },
+  "files": [
+    "bin",
+    "index.js",
+    "async-shell.darwin-x64.node",
+    "async-shell.darwin-arm64.node",
+    "async-shell.linux-x64-gnu.node",
+    "async-shell.linux-arm64-gnu.node",
+    "async-shell.linux-x64-musl.node",
+    "async-shell.linux-arm64-musl.node",
+    "async-shell.win32-x64-msvc.node",
+    "async-shell.win32-arm64-msvc.node"
+  ],
+  "engines": {
+    "node": ">= 18"
+  },
+  "napi": {
+    "name": "async-shell"
+  },
+  "scripts": {
+    "build": "napi build --release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aerospeedsta/async-shell.git"
+  },
+  "keywords": [
+    "mcp",
+    "agent",
+    "pty",
+    "terminal",
+    "multiplexer"
+  ],
+  "author": "CURD Project",
+  "license": "MIT",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.4"
+  }
+}

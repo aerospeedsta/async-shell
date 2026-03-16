@@ -1,0 +1,6 @@
+/target
+.venv
+*.node
+*.tgz
+node_modules
+bun.lock

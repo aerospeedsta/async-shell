@@ -1,0 +1,36 @@
+[package]
+name = "async-shell"
+version = "0.1.0"
+edition = "2021"
+description = "A headless terminal multiplexer and MCP server for AI agents"
+
+[features]
+default = []
+python = ["pyo3"]
+node = ["napi", "napi-derive", "napi-build"]
+
+[dependencies]
+napi = { version = "2.16", default-features = false, features = ["napi4"], optional = true }
+
+napi-derive = { version = "2.16", optional = true }
+
+pyo3 = { version = "0.24", features = ["extension-module", "abi3-py37"], optional = true }
+tokio = { version = "1.0", features = ["full"] }
+portable-pty = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+ed25519-dalek = { version = "2.1", features = ["rand_core"] }
+rand_core = { version = "0.6", features = ["std"] }
+hex = "0.4"
+
+[lib]
+name = "async_shell"
+crate-type = ["cdylib", "rlib"]
+
+[build-dependencies]
+napi-build = { version = "2.1", optional = true }
